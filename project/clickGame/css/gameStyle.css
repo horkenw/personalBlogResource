@@ -1,0 +1,179 @@
+/* totally progress bar */
+.bar,
+.bars {
+  position: relative;
+  width: 100%;
+  border: 10px solid white;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.bar div,
+.bars div {
+  display: block;
+  position: relative;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 9px;
+  background: #e80f69;
+  background-image: -webkit-linear-gradient(left, #e80f69, #ed6d00);
+  background-image: -moz-linear-gradient(left, #e80f69, #ed6d00);
+  background-image: -ms-linear-gradient(left, #e80f69, #ed6d00);
+  background-image: -o-linear-gradient(left, #e80f69, #ed6d00);
+}
+.cent {
+  margin: 0 auto;
+  padding: 0;
+  width: 65%;
+  overflow: hidden;
+}
+.progress {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  font-size: 80%;
+  text-transform: uppercase;
+}
+.progress.stacked {
+  display: block;
+}
+.progress > li {
+  -ms-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  flex: 1;
+  list-style: none;
+  text-align: center;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+}
+.progress > li .triangle {
+  display: block;
+  margin: auto;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: white transparent transparent;
+}
+.progress li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+  font-size: 2em;
+  color: white;
+}
+/* personal progress bar */
+.progress-zone {
+  background: white;
+  position: relative;
+  height: 65px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 45px;
+  text-align: left;
+  overflow: hidden;
+}
+.progress-zone > .progress {
+  position: absolute;
+  height: 100%;
+  transition: width 0.4s ease-in;
+  width: 0;
+  z-index: 1;
+  background: #ffa800;
+  background-image: -webkit-linear-gradient(left, #ffa800, #ef5626);
+  background-image: -moz-linear-gradient(left, #ffa800, #ef5626);
+  background-image: -ms-linear-gradient(left, #ffa800, #ef5626);
+  background-image: -o-linear-gradient(left, #ffa800, #ef5626);
+}
+.progress-zone > .dot {
+  position: relative;
+  width: 0.5%;
+  height: 100%;
+  margin-left: 4.5%;
+  background-color: #aad167;
+  float: left;
+  z-index: 2;
+}
+@media only screen and (max-device-width: 768px) {
+  .progress-zone {
+    width: 80%;
+  }
+}
+@media only screen and (min-device-width: 1200px) {
+  .progress-zone {
+    width: 40%;
+  }
+}
+/* started dialog */
+.drop_down {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 30;
+  overflow: hidden;
+}
+.drop_down .drop_count_down {
+  font-size: 40em;
+  font-family: Merienda, 'Allerta Stencil';
+  color: red;
+  text-shadow: 3px 5px #fff;
+  font-weight: 800;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.drop_down .chactor_collection {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.drop_down .chactor_collection .collection_title {
+  font-size: 4em;
+  color: white;
+  text-align: center;
+  font-weight: 800;
+}
+.drop_down .chactor_collection .collection_content .item {
+  cursor: pointer;
+}
+.drop_down .container {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+.drop_down .container.power_dialog .question {
+  font-size: 2em;
+  text-align: left;
+  font-family: "微軟正黑體";
+}
+/* murmur */
+.mur {
+  pointer-events: none;
+  height: 170px;
+}

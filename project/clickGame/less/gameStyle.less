@@ -1,0 +1,183 @@
+.common-gardient(@startColor, @endColor){
+    background: @startColor;
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+    background-image: -moz-linear-gradient(left, @startColor, @endColor);
+    background-image: -ms-linear-gradient(left, @startColor, @endColor);
+    background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+.common-translate(@x, @y:0) {
+    -webkit-transform:       translate(@x, @y);
+    -moz-transform:      translate(@x, @y);
+    -ms-transform:       translate(@x, @y);
+    -o-transform:        translate(@x, @y);
+}
+.common-center-position(){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    .common-translate(-50%, -50%);
+}
+
+/* totally progress bar */
+@bar-form-color: white;
+
+.default(@m: 0, @p: 0){
+    margin: @m;
+    padding: @p;
+}
+
+.bar{
+    position: relative;
+    width: 100%;
+    border: 10px solid @bar-form-color;
+    border-radius: 20px;
+    box-sizing: border-box;
+    div{
+        display: block;
+        position: relative;
+        height: 25px;
+        line-height: 25px;
+        border-radius: 9px;
+        .common-gardient(#e80f69, #ed6d00);
+    }
+}
+
+.bars:extend(.bar all){
+    
+}
+
+.cent{
+    .default(0 auto);
+    width: 65%;
+    overflow: hidden;
+}
+
+.progress{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    .default();
+    font-size: 80%;
+    text-transform: uppercase;
+    &.stacked{
+        display: block;
+    }
+    > li{
+        -ms-flex: 1;
+        -webkit-flex: 1;
+        -moz-flex: 1;
+        flex: 1;
+        list-style: none;
+        text-align: center;
+        width: auto;
+        .default();
+        position: relative;
+        display: block;
+        .triangle{
+            display: block;
+            margin: auto;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 10px 0 10px;
+            border-color: @bar-form-color transparent transparent;
+        }
+    }
+    li{
+        list-style-type: none;
+        .default();
+        font-weight: 900;
+        font-size: 2em;
+        color: @bar-form-color;
+    }
+}
+
+/* personal progress bar */
+@personal-bar-large: 80%;
+@personal-bar-middle: 50%;
+@personal-bar-small: 40%;
+@personal-bar: white;
+@personal-bar-bot: #aad167;
+.progress-zone {
+    background: @personal-bar;
+    position: relative;
+    height: 65px;
+    width: @personal-bar-middle;
+    .default(0 auto, 0);
+    margin-top: 45px;
+    text-align: left;
+    overflow: hidden;
+    > .progress {
+        position: absolute;
+        height: 100%;
+        transition: width .4s ease-in;
+        width: 0;
+        z-index: 1;
+        .common-gardient(#ffa800, #ef5626);
+    }
+    > .dot {
+        position: relative;
+        width: 0.5%;
+        height: 100%;
+        margin-left: 4.5%;
+        background-color: @personal-bar-bot;
+        float: left;
+        z-index: 2;
+    }
+    @media only screen and (max-device-width : 768px){   
+        width: @personal-bar-large;
+    }
+    @media only screen and (min-device-width : 1200px){   
+        width: @personal-bar-small;
+    }
+}
+
+/* started dialog */
+.drop_down{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: hsla(0, 0%, 0%, 0.5);
+    z-index: 30;
+    overflow: hidden;
+    .drop_count_down{
+        font-size: 40em;
+        font-family: Merienda, 'Allerta Stencil';
+        color: red;
+        text-shadow: 3px 5px #fff;
+        font-weight: 800;
+        .common-center-position();
+    }
+    .chactor_collection{
+        width: 80%;
+        .common-center-position();
+        .collection_title{
+            font-size: 4em;
+            color: white;
+            text-align: center;
+            font-weight: 800;
+        }
+        .collection_content .item{
+            cursor: pointer;
+        }
+    }
+    .container{
+        width: 100%;
+        .common-center-position();
+        &.power_dialog .question{
+            font-size: 2em;
+            text-align: left;
+            font-family: "微軟正黑體";
+        }
+    }
+}
+
+/* murmur */
+.mur{
+    pointer-events: none;
+    height: 170px;
+}

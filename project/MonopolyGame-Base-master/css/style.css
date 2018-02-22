@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+.index-body{margin:0; padding:0; font-family:"微軟正黑體" ; backgrouond-color:#e7ee4f; line-height:1.8; background-image:url(../images/bg_01.gif); }
+div.all1{ display:block; background-image:url(../images/map1.jpg); background-repeat:no-repeat; background-position:center top;}
+
+body {margin:0; padding:0; font-family:"微軟正黑體"; backgrouond-color:#e7ee4f; line-height:1.8;}
+div.all1{ display:block; background-image:url(../images/map1.jpg); background-repeat:no-repeat; background-position:center top;}
+
+a{ color:#fff; text-decoration:none;}
+a:hover{ color:#FFFD00;}
+a:hover img{ MOZ-OPACITY: 0.5; OPACITY: 0.5;FILTER: alpha(opacity=50);}
+
+div.main1{ width:1000px; height:818px;margin-right:auto; margin-left:auto; position:relative;display:block; background-image:url(../images/map1.jpg); background-repeat:no-repeat; background-position:center top;}
+
+h1.logo{ line-height:1px; padding:0px; margin:0; display:block; background-image:url(../images/index_logo_03.png); overflow: hidden; text-indent: 100%; white-space: nowrap; width:600px; height:193px; margin-left:201px;  z-index:15; position:absolute;}
+div.logo_time{ display:block; margin-left:5px; padding-top:10px; }
+div.sign_in{ display:block; width:210px; height:173px; background-image:url(../images/signin_bg_04.png);  right:0px; top:0px; padding-top:10px; position:absolute; background-repeat:no-repeat;}
+div.sign_in .sign_in_table{ margin-left:auto; margin-right:20px;}
+div.sign_in .sign_in_table td{ height:42px; line-height:18px; }
+
+hr{  border: 0;
+    height: 0;
+    border-top: 1px solid #F9F9F9;
+    border-bottom: 1px solid #DCDBDB; margin-bottom:25px; margin-top:15px;}
+div.space{ clear:both;}
+
+/*----copyright----*/
+div.footer { background-image:url(../images/footer_bg_12.gif); height:126px; width:100%; margin-top:20px; }
+div.footer_table{ width:950px; margin-left:auto; margin-right:auto; padding-top:35px; font-size:90%; color:#fff; }
+
+/*------menu--------*/
+ul.menu{ margin:0; padding:0; margin-top:225px;}
+ul.menu li{ list-style:none; text-indent:-9999px; float:left;}
+.menu_but1 a{ display:block; width:208px; height:58px; background-image: url(../images/menu_05.gif);}
+.menu_but2 a{ display:block; width:198px; height:58px; background-image: url(../images/menu_06.gif);}
+.menu_but3 a{ display:block; width:198px; height:58px; background-image: url(../images/menu_07.gif);}
+.menu_but4 a{ display:block; width:198px; height:58px; background-image: url(../images/menu_08.gif);}
+.menu_but5 a{ display:block; width:198px; height:58px; background-image: url(../images/menu_09.gif);}
+
+.menu_but1 a:hover{  background-image: url(../images/menu_o_05.gif);}
+.menu_but2 a:hover{  background-image: url(../images/menu_o_06.gif);}
+.menu_but3 a:hover{  background-image: url(../images/menu_o_07.gif);}
+.menu_but4 a:hover{  background-image: url(../images/menu_o_08.gif);}
+.menu_but5 a:hover{  background-image: url(../images/menu_o_09.gif);}
+
+
+/*--------走的格子------*/
+.map_table{ width:910px; height:490px; top:173px; left:35px;  position:relative; }
+.map_grid{display:block; width:70px; height:70px; position:absolute;}
+
+/*-------POP-------*/
+div.pop{ width:630px;  background-color:#f5f5f5; border:#C3C3C3 solid 1px;-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px; padding:5px 5px 20px 5px; }
+div.pop a{ color:#2DABCB;}
+div.pop a:hover{ color:#F78828;}
+.pop_bg1{ display:block; height:600px; width:880px; background-image:url(../images/pop_bg1.png); position:relative; }
+.pop_bg2{ display:block; height:550px; width:824px; background-image:url(../images/pop_bg2.png); position:relative; }
+div.pop_title{ display:block; width:200px; font-size:180%; color:#fff; font-weight: bold; text-align:center; margin-left:auto; margin-right:auto; line-height:47px;}
+div.pop_close{ position:absolute; right:90px; top:20px; width:40px; height:40px; display:block;}
+div.pop_close2{ position:absolute; right:30px; top:20px; width:40px; height:40px; display:block;}
+div.pop_main{ width:617px; margin-right:auto; margin-left:auto; margin-top:25px; line-height:1.7;}
+div.pop_main ul{ padding:0px; margin:0; color:#605852;}
+div.pop_info_main_bg{ background-image:url(../images/pop_info.png); width:447px; height:371px; padding-left:150px; margin-left:10px; padding-top:5px; margin-top:5px;}
+div.pop_main2{ width:790px;margin-right:auto; margin-left:auto; margin-top:15px; line-height:1.6;}
+.pop_q a{ display:block; color:#777;  }
+.pop_q a:hover{ display:block; color:#fff; background-color:#FF9E13;-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px; padding-left:10px;}
+.question{ font-size:120%; font-weight:bold; display:block;padding-left:10px; border-bottom:#BDADA0 solid 1px; padding-right:10px;}
+.pop_title2{ background-color:#fff;font-size:150%; font-weight:bold; color:#0f4889; -webkit-border-top-left-radius: 10px;
+-webkit-border-top-right-radius: 10px;
+-moz-border-radius-topleft: 10px;
+-moz-border-radius-topright: 10px;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px; padding-left:10px; border-bottom:#5AA6BD solid 2px;}
+.pop_but a{ display:block; padding-left:20px; padding-right:20px; margin-left:10px;-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px; border:#96A9B1 solid 1px; text-align:center; color:#5D7A9E; font-weight:bold; float:right;}
+.pop_but a:hover{  border:#E8AF6F solid 1px; text-align:center; color:#D5731C; background:#FFFFFF;}
+div.pop3{ display: block; width:450px;  background-color:#f5f5f5; border:#C3C3C3 solid 1px;-webkit-border-radius: 10px;
+    -moz-border-radius: 10px; border-radius: 10px; padding:5px 5px 20px 5px; }
+div.pop3_main{ width:420px; margin-right:auto; margin-left:auto; margin-top:25px; line-height:1.7;}
+div.pop3 a{ color:#2DABCB;}
+div.pop3 a:hover{ color:#F78828;}
+
+/*------font------*/
+.font01{ color:#c30000; font-size:130%; font-weight:bold;}
+.font02{ color:#c60202; font-size:110%;font-weight:bold;}
+
+.but1 a{ background-color:#a84200; -webkit-border-radius: 7px;
+-moz-border-radius: 7px;
+border-radius: 7px; padding:5px 10px 5px 10px;}
+.but1 a:hover{ background-color:#C76431; }
+
+.but2 a{ background-color:#ff6700; -webkit-border-radius: 7px;
+-moz-border-radius: 7px;
+border-radius: 7px; padding:5px 10px 5px 10px;}
+.but2 a:hover{ background-color:#ff881e; }

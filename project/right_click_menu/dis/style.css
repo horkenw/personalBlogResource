@@ -1,0 +1,78 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 24px;
+  max-width: 960px;
+}
+.primary-footer {
+  padding: 24px 0;
+  color: #bfbfbf;
+  text-align: center;
+}
+.content {
+  padding: 48px 0;
+  border-bottom: 2px solid #cccccc;
+}
+/* tasks */
+.tasks,
+.context-menu-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: solid 1px #cccccc;
+}
+.task:last-child {
+  border-bottom: none;
+}
+.task.hide {
+  display: none;
+}
+/* task context */
+.context-menu {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  padding: 12px 0;
+  width: 240px;
+  background: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: 1px 1px 2px 0 #bfbfbf;
+  -moz-box-shadow: 1px 1px 2px 0 #bfbfbf;
+  box-shadow: 1px 1px 2px 0 #bfbfbf;
+}
+.context-menu-active,
+.context-menu-item,
+.context-menu-link {
+  display: block;
+}
+.context-menu-item {
+  margin-bottom: 4px;
+}
+.context-menu-item:last-child {
+  margin-bottom: 0;
+}
+.context-menu-link {
+  padding: 4px 12px;
+  color: #4d6aff;
+  text-decoration: none;
+}
+.context-menu-link:hover {
+  color: white;
+  background: #4d6aff;
+}

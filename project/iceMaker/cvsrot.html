@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<!-- <link rel="stylesheet" type="text/css" media="all" href="css/reset.css" /> --> <!-- reset css -->
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+<style>
+    body{ background-color: ivory; }
+    canvas{border:1px solid red;}
+</style>
+
+<script>
+$(function(){
+
+    var canvas=document.getElementById("canvas");
+    var ctx=canvas.getContext("2d");
+
+    var angleInDegrees=0, size=1;
+
+    var image=document.createElement("img");
+    image.onload=function(){
+        ctx.drawImage(image,canvas.width/2-image.width/2,canvas.height/2-image.width/2);
+    }
+    image.src="https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97250&w=250&h=250";
+
+    // 旋轉
+    $("#clockwise").click(function(){ 
+        angleInDegrees+=5;
+        drawRotated(angleInDegrees);
+    });
+
+    $("#counterclockwise").click(function(){ 
+        angleInDegrees-=5;
+        drawRotated(angleInDegrees);
+    });
+
+    function drawRotated(degrees){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        ctx.save();
+        //重新繪製圖片，並無移動中心點
+        // ctx.translate(canvas.width/2,canvas.height/2);
+        // ctx.rotate(degrees*Math.PI/180);
+        // ctx.drawImage(image,-image.width,-image.width);
+        //重新繪製圖片，並且移動中心點
+        ctx.translate(canvas.width/2,canvas.height/2);
+        ctx.rotate(degrees*Math.PI/180);
+        ctx.drawImage(image,-image.width/2,-image.width/2);
+        ctx.restore();
+    }
+
+    // 大小
+    $("#scaleup").click(function(){ 
+        size+=0.3;
+        drawScale(size);
+    });
+
+    $("#scaledown").click(function(){ 
+        size-=0.3;
+        drawScale(size);
+    });
+
+    function drawScale(size){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        ctx.save();
+        //重新繪製圖片，並且移動中心點
+        ctx.translate(canvas.width/2,canvas.height/2);
+        ctx.scale(size,size);
+        ctx.drawImage(image,-image.width/2,-image.width/2);
+        ctx.restore();
+    }
+
+    // 鏡射
+    $("#mirrorhoz").click(function(){ 
+        mirrorImg(-1, 1);
+    });
+
+    $("#mirrorver").click(function(){ 
+        mirrorImg(1, -1);
+    });
+
+    function mirrorImg(x, y){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        ctx.save();
+        //重新繪製圖片，並且移動中心點
+        ctx.translate(canvas.width/2,canvas.height/2);
+        ctx.scale(x, y);
+        ctx.drawImage(image,-image.width/2,-image.width/2);
+        ctx.restore();
+    }
+}); 
+
+</script>
+
+</head>
+
+<body>
+    <canvas id="canvas" width=400 height=400></canvas><br>
+    <button id="clockwise">向左旋轉</button>
+    <button id="counterclockwise">向右旋轉</button>
+    <button id="scaleup">放大</button>
+    <button id="scaledown">縮小</button>
+    <button id="mirrorhoz">垂直鏡像</button>
+    <button id="mirrorver">水平鏡像</button>
+</body>
+</html>

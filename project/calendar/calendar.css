@@ -1,0 +1,184 @@
+#datepicker{
+    margin: 15px 0;
+    float: left;
+    padding-left: 0;
+}
+.deny{
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.pink{
+    background: hsl(312, 70%, 55%);
+}
+.skyblue{
+    background: hsl(223, 100%, 55%);
+}
+.eventselect{
+    display: none;
+}
+.eventwrap{
+    margin-top: 15px;
+}
+
+.setdayoff{
+    clear: left;
+    padding-top: 0.5em;
+}
+
+.setdayoff .labeltext{
+    display: inline-block;
+    position: absolute;
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+.setdayoff .weekendoff{
+    margin-top: 15px;
+}
+
+.panel-body{
+    padding: 0;
+}
+/* switch btn */
+.eventset .switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 10px;
+    float: none;
+}
+
+.eventset .switch input{
+    display: none;
+}
+.eventset .slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background-color: hsl(0, 0%, 75%);
+    transition: .4s;
+}
+.eventset .slider:before{
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: white;
+    transition: .4s;
+}
+.eventset input:checked + .slider,
+.eventselect input:checked + label,
+.setcalendat input:checked + label{
+    background-color: hsl(160, 100%, 70%);
+    box-shadow: none;
+}
+input:focus + .slider{
+    -webkit-box-shadow: 0 0 1px hsl(160, 100%,);
+    box-shadow: 0 0 1px hsl(160, 100%,);
+}
+input:checked + .slider:before{
+    transform: translateX(26px);
+}
+.slider.round{
+    border-radius: 34px;
+}
+.slider.round:before{
+    border-radius: 50%;
+}
+/* single select  */
+.eventheader{
+    margin-bottom: 10px;
+}
+
+.setcalendat input,
+.eventselect input{
+    display: none;
+}
+.setcalendat label,
+.eventselect label{
+    display: inline-block;
+    width: 80px;
+    background: hsl(0, 0%, 75%);
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+    padding: 6px 8px;
+    margin: -3px;
+    border: 1px solid hsla(0, 0%, 0%, 0.5);
+    transition: all .1s ease-in-out;
+    box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.3);
+}
+.setcalendat label:hover,
+.eventselect label:hover{
+    cursor: pointer;
+}
+
+/* month setUp */
+.showmonths{
+    margin: 1em 0;
+}
+.showmonths .month_label{
+    position: relative;
+    display: block;
+    vertical-align: top;
+    border-radius: 18px;
+    height: 32px;
+    border: none;
+    margin-left: 10px;
+}
+
+.month_label .months{
+    color: white;
+    display: block;
+    font-size: 1em;
+    width: 200%;
+}
+
+.month_label .months:before,
+.month_label .months:after{
+    position: absolute;
+    top: 50%;
+    margin-top: -.7em;
+    line-height: 22px;
+    transition: transform .5s ease-in-out, opacity .5s ease-in-out;
+}
+
+.month_label .months:before{
+    content: attr(data-three);
+    right: 7px;
+}
+
+.month_label .months:after{
+    content: attr(data-six);
+    left: 7px;
+    color: #FFFFFF;
+    opacity: 0;
+}
+
+.month_label .slider:before{
+    top: 3px;
+}
+
+.month_label #monthset:checked ~ .slider{
+    background: hsl(312, 70%, 55%);
+}
+
+.month_label .slider{
+    background: hsl(223, 100%, 55%);
+}
+
+#monthset:checked + .slider:before{
+    transform: translateX(47px);
+}
+
+.month_label #monthset:checked ~ .months:before{
+    opacity: 0;
+}
+
+.month_label #monthset:checked ~ .months:after{
+    opacity: 1;
+}

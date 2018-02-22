@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Right click menu</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="dis/style.css">
+</head>
+<body>
+	<main class="content">
+		<div class="container">
+			<ul class="tasks">
+				<li class="task" data-id="1">
+					<div class="task_content">Go to Somewhere</div>
+					<div class="task_actions hidden">
+						<i class="fa fa-eye"></i>
+						<i class="fa fa-edit"></i>
+						<i class="fa fa-times"></i>
+					</div>
+				</li>
+				<li class="task" data-id="2">
+					<div class="task_content">Type Some Code</div>
+					<div class="task_actions hidden">
+						<i class="fa fa-eye"></i>
+						<i class="fa fa-edit"></i>
+						<i class="fa fa-times"></i>
+					</div>
+				</li>
+				<li class="task" data-id="3">
+					<div class="task_content">Build An App</div>
+					<div class="task_actions hidden">
+						<i class="fa fa-eye"></i>
+						<i class="fa fa-edit"></i>
+						<i class="fa fa-times"></i>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</main>
+	<footer class="primary-footer">
+		<div class="container">
+			<small>Bla Bla some copyright here<a href="#">link to somewhere</a></small>
+		</div>
+	</footer>
+	<nav id="context-menu" class="context-menu">
+		<ul class="context-menu-items">
+			<li class="context-menu-item">
+				<a href="#" class="context-menu-link" data-action="view">
+					<i class="fa fa-eye"></i>預覽動作
+				</a>
+			</li>
+			<li class="context-menu-item">
+				<a href="#" class="context-menu-link" data-action="edit">
+					<i class="fa fa-edit"></i>編輯動作
+				</a>
+			</li>
+			<li class="context-menu-item">
+				<a href="#" class="context-menu-link" data-action="delete">
+					<i class="fa fa-times"></i>刪除動作
+				</a>
+			</li>
+		</ul>
+	</nav>
+	<script src="./rightclickjs.js"></script>
+</body>
+</html>

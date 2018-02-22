@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./dis/nestableStyle.css">
+    <style>
+        .click > .list_handle{
+            background: hsl(120, 80%, 80%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header_wrap">
+            <h2>選單維護</h2>
+            <!--Really needed??-->
+            <!-- <span><i class="fa fa-pencil" aria-hidden="true"></i></span> -->
+        </div>
+        <div class="list_wrap">
+            <ul class="list_items"></ul>
+        </div>
+        <footer>
+            <div class="add_more"><i class="fa fa-plus" aria-hidden="true"></i></div>
+        </footer>
+    </div>
+    <style>
+    .small_img {
+        width: 200px;
+        height: 350px;
+        margin-top: 10px;
+
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .small_img:hover:before,
+    .small_img:hover:after {
+        content: '';
+        position: absolute;
+    }
+    
+    .small_img:hover:before {
+        content: '預覽';
+        border: 2px solid hsl(0, 0%, 100%);
+        border-radius: 10px;
+        line-height: 2em;
+        padding: 5px;
+        color: white;
+        z-index: 5;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .small_img:hover:after {
+        width: 100%;
+        height: 100%;
+        background: hsla(0, 0%, 0%, 0.85);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+    
+    .small_img img {
+        height: 100%;
+    }
+    
+    .bg_drop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        background: hsla(0, 0%, 0%, 0.85);
+        overflow: auto;
+    }
+    
+    .org_img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+    }
+    .list_handle i{
+        text-shadow: 0.5px 0.5px 0.5px hsla(0, 0%, 0%, 0.4);
+    }
+    .editbox{
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        padding: 1px 5px;
+    }
+    .editbtn{
+        font-size: 0.6em;
+        -webkit-flex-shrink: 0;
+        height: 25px;
+        line-height: 20px;
+        flex-shrink: 0;
+        margin-left: 6px;
+        border-radius: 12px;
+        border-width: 2px;
+        padding-left: 10px;
+        padding-right: 9px;
+        color: hsla(195, 88%, 29%, 1);
+    }
+    .editarea{
+        font-size: 14px;
+        -webkit-flex-grow: 1;
+        flex-grow: 1;
+        color: #2b5672;
+        outline: none;
+        text-align: left;
+        box-sizing: border-box;
+        text-overflow: ellipsis;
+        border-radius: 4px;
+        border: solid 1px #88ccf8;
+        background: #fff;
+        height: 23px;
+        padding-left: 15px;
+        width: 0;
+    }
+    </style>
+    <div data-url="http://lorempixel.com/680/1800/nature/">
+        <figure class="small_img">
+            <img src="http://lorempixel.com/680/1200/nature/" alt="animate">
+        </figure>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"></script>
+    <script src="./nestable.js"></script>
+    <script src="./menuSetup.js"></script>
+    <script>
+    var _div = $('<div/>'), img;
+    var data = [{url: 'www.google.com', name: 'MenuSet1'}, {url: 'www.google.com', name: 'MenuSet2'}, {url: 'www.google.com', name: 'MenuSet3'}, {url: 'www.google.com', name: 'MenuSet4'}, {url: 'www.google.com', name: 'MenuSet5'}, {url: '#', name: 'MenuSet6'}, {url: '#', name: 'MenuSet7'}, {url: 'www.google.com', name: 'English'}];
+
+    
+    $('.list_wrap').menuData({
+        maxDepth: 2,
+        data: data,
+        nestable: true
+    });
+
+
+    $('.small_img').on('click', function() {
+        _div.clone().addClass('bg_drop').appendTo('body');
+        img = $('<img>', {
+            alt: 'lalala',
+            src: $(this).data('url'),
+            class: 'org_img'
+        })
+        $('.bg_drop').append(img);
+        $('.bg_drop').on('click', function() {
+            $('.bg_drop').remove();
+        })
+    })
+    </script>
+</body>
+
+</html>

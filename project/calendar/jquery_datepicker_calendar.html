@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Example 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="jquery-ui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="calendar.css">
+</head>
+
+<body>
+    <!-- Datepicker -->
+    <div class="eventset col-md-12 col-sm-12 col-xs-12">
+        <h2>請設定活動事件</h2>
+        <div>
+            <div id="datepicker"></div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4 eventwrap">
+            <div class="setcalendat">
+                <h3>選取日曆選項</h3>
+                <div class="showmonths">
+                    <label class="month_label" for="monthset">
+                        <input type="checkbox" name="month" id="monthset">
+                        <div class="slider round"></div>
+                        <div class="months" data-three="三個月" data-six="六個月"></div>
+                    </label>
+                </div>
+            </div>
+            <div class="setdayoff">
+                <h3>選取休假選項</h3>
+                <div class="weekendoff">
+                    <label class="switch" for="weekend">
+                        <input type="checkbox" name="holliday" id="weekend">
+                        <div class="slider round"></div>
+                    </label>
+                    <div class="labeltext">所有六日為假日</div>
+                </div>
+                <div class="monthoff">
+                    <label class="switch" for="offmonth">
+                        <input type="checkbox" name="holliday" id="offmonth">
+                        <div class="slider round"></div>
+                    </label>
+                    <div class="labeltext">整月為假日</div>
+                </div>
+            </div>
+            <div class="eventselect">
+                <h3 class="eventheader">選擇活動項目(單選)</h3>
+                <div>
+                    <input type="radio" name="event" id="holliday" value="2" selected>
+                    <label for="holliday">假日</label>
+                </div>
+                <div>
+                    <input type="radio" name="event" id="specialprice" value="3">
+                    <label for="specialprice">特殊日</label>
+                </div>
+                <div>
+                    <input type="radio" name="event" id="workingday" value="1">
+                    <label for="workingday">取消設定</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="jquery-ui.i18n.js"></script>
+    <script src="calendarSetup.js"></script>
+    <script>
+    (function() {
+        var calendar = new calendarSetup({
+            calendar: $("#datepicker"),
+            column: 1
+        });
+    })()
+    </script>
+</body>
+
+</html>

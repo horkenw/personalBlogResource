@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8" />
+    <title>測試 audio 標籤於行動裝置瀏覽器能否播放</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="author" content="patw, Patrick Wang" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#sound_laugh")[0].play();
+            });
+
+            function playsound()
+            {
+                $("#sound_laugh")[0].play();
+                $("#sound_laugh")[0].pause();
+
+                setTimeout(function(){
+                    $("#sound_laugh")[0].currentTime = 0;
+                    $("#sound_laugh")[0].play();
+                }, 2000);
+            }
+        </script>
+</head>
+
+<body>
+
+    <audio id="sound_laugh" preload="auto" controls="controls">
+      <source src="file2.mp3">
+    </audio>
+
+    <p><input type="button" value="播放吧～" style="width:200px;height:100px;font-size:16pt;" onclick="javascript:playsound();" /></p>
+
+</body>
+</html>
