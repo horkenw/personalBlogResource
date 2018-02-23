@@ -3,6 +3,7 @@ title: 文字取代圖片的方法
 date: 2017-01-15 21:45:35
 categories: Front-end technology
 tags: HTML, CSS, 圖片取代文字
+cover_image: images/grassland.jpg
 ---
 
 最近遇到一個還蠻奇特的情境，早在幾年前就有人提過，Image 部分雖說不需要使用文字，但是又有文章提到 Google 的 SEO 其實會去抓 Image 裡面是否有文字，也就是說除了 Alt 必須要設定之外，另外就是圖片底下還可以放置文字，更明確的表達出這張圖所代表的意義。

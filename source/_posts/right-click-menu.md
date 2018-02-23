@@ -4,6 +4,7 @@ title: Right Click Menu
 categories: UI design
 date: 2016-03-06 19:57:56
 tags: javascript, custom click menu
+cover_image: images/bridge.jpg
 ---
 
 I was got a feature request few days ago, is about our costomer they don't want the original right click menu. They want a costom menu only show out download & delete & past three action.
@@ -17,7 +18,7 @@ After I serch on internet, I saw most of people to do this all use `contextmenu`
 According to W3C school:
 > The oncontextmenu event occurs when the user right-clicks on an element to open the context menu
 
-[Contextmenu](https://www.w3schools.com/jsref/event_oncontextmenu.asp)
+[Contextmenu in W3C page](https://www.w3schools.com/jsref/event_oncontextmenu.asp)
 
 So now I know that right click also has their own event, not only `click` event to detectd which button you were click though.
 
@@ -30,5 +31,7 @@ Example code:
 		----do something when right click on page----
 	})
 ```
+
+[DEMO](https://horkenw.github.io/project/right_click_menu/rightclickmenu.html)
 
 

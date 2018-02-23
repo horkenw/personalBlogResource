@@ -4,6 +4,7 @@ title: 偽寂寞星球主視覺
 categories: UI design
 date: 2018-02-21 18:21:11
 tags: hero banner, banner caousel
+cover_image: images/lakeview.jpg
 ---
 
 前幾天看到寂寞星球他們的主視覺，覺得那個感覺真的不錯。
@@ -71,4 +72,4 @@ $('.point_bar').css('left', $(target).offset().left)
 
 這部分則是使用到CANVAS的色彩解析來判斷，詳細的解釋之前因該有說過，就不再贅述。
 
-[1](http://horkenw.github.io/project/heroBanner/) 
+[1]:http://horkenw.github.io/project/heroBanner/
