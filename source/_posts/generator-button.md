@@ -4,6 +4,7 @@ title: Generator gradient button
 categories: Js tip
 date: 2016-04-07 21:28:42
 tags: css, gradient
+cover_image: images/beachside.jpg
 ---
 
 Here is a website for us to generate a `Gradient button` easily

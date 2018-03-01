@@ -1,9 +1,9 @@
 ---
 title: '[HTML]Input-radio and label'
 date: 2017-04-23 22:45:35
-categories: Js tip
+categories: Front-end technology
 tags: HTML, structor, semantic
-cover_image: images/night.jpg
+cover_image: images/lakeview.jpg
 ---
 
 下午花了我一整天去處理一個Bug，我想很多人都常用Tab標籤來區分內容吧?

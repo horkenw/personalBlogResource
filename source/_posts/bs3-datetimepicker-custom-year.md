@@ -4,6 +4,7 @@ title: BS3 Datetimepicker custom range
 categories: jQuery tip
 date: 2015-05-12 22:29:00
 tags: bs3-datetimepicker, jQuery, ui
+cover_image: images/grassland.jpg
 ---
 
 ### Eonasdan BS3+ datetimepicker - how to costom set year range

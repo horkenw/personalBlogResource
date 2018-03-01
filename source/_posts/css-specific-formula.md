@@ -4,6 +4,7 @@ title: Css Specific Formula
 categories: Front-end technology
 date: 2016-01-15 21:33:15
 tags: css formula
+cover_image: images/lakeview.jpg
 ---
 
 取自 [Kalpesh Singh](http://www.codewithcoffee.com/5-things-know-css-specificity/) CSS比重的分析
