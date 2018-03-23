@@ -10,7 +10,7 @@ Hmm...., recently I was hear some different noun, about URI, URL and URN.
 
 Normally I use to call it URL for all of the link address, but now I know that there has some different concepts for them, and after I search and browsing on Google, here is some exact define for it all.
 
-I split it to three part,
+I found some definition about it on either Wikipedia or some people blog,
 
 ## URI (Uniform Resource Identifier): 
 
@@ -25,14 +25,14 @@ It is a subset of the Uniform Resource Identifier (URI) that specifies where an 
 from [Difference between URI, URL and URN][]
 
 > It is colloquially termed a web address, is a reference to a resource that specifies its location on network, URL occur most commonly to reference web page(html), but are also used for file transfor(ftp) or email(mailto) for most, and many other application.
-> Definition from [Wekipidea-URL](https://en.wikipedia.org/wiki/URL)
+> Definition from [Wikipedia-URL](https://en.wikipedia.org/wiki/URL)
 
 ## URN (Uniform Resource Name):
 It is a Uniform Resource Identifier (URI) that uses the URN scheme, and does not imply availability of the identified resource.
 from [Difference between URI, URL and URN][]
 
 > It was conceived as persistent, location-independent, identifiers assigned within defined namespaces, typically by an authority responsible for the namespace, so that they are globally unique and persistent over long periods of time, even after the resource which they identify ceases to exist or becomes unavailable.[3]
-> Definition from [Wekipidea-URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name)
+> Definition from [Wikipedia-URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name)
 
 [Difference between URI, URL and URN]: https://quintupledev.wordpress.com/2016/02/29/difference-between-uri-url-and-urn/
 
