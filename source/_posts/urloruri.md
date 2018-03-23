@@ -24,7 +24,7 @@ Thus URI can be including both URL and URN, or you can said URL and URN are part
 It is a subset of the Uniform Resource Identifier (URI) that specifies where an identified resource is available and the mechanism for retrieving it.
 from [Difference between URI, URL and URN][]
 
-> It is colloquially termed a web address, is a reference to a resource that specifies its location on network, URL occur most commonly to reference web page(html), but are also used for file transfor(ftp) or email(mailto) for most, and many other application.
+> It is colloquially termed a web address, is a reference to a resource that specifies its location on network, URL occur most commonly to reference web page(html), but are also used for file transfor(ftp://) or email(mailto://) for most, and many other application.
 > Definition from [Wikipedia-URL](https://en.wikipedia.org/wiki/URL)
 
 ## URN (Uniform Resource Name):
@@ -33,6 +33,15 @@ from [Difference between URI, URL and URN][]
 
 > It was conceived as persistent, location-independent, identifiers assigned within defined namespaces, typically by an authority responsible for the namespace, so that they are globally unique and persistent over long periods of time, even after the resource which they identify ceases to exist or becomes unavailable.[3]
 > Definition from [Wikipedia-URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name)
+
+*For correspond some real world stuffs*
+### URL
+Something like a person address or something you can used for finding this people(website),
+
+### URN
+Support to be a unique identify, 
+like personal ID or Name of a people.
+More clearly is book ISBN(But is not a URL as it does not define where the book can be found)
 
 [Difference between URI, URL and URN]: https://quintupledev.wordpress.com/2016/02/29/difference-between-uri-url-and-urn/
 
