@@ -4,7 +4,7 @@ title: 偽寂寞星球主視覺
 categories: UI design
 date: 2018-02-21 18:21:11
 tags: hero banner, banner caousel
-cover_image: images/lakeview.jpg
+cover_image: images/grassland.jpg
 ---
 
 前幾天看到寂寞星球他們的主視覺，覺得那個感覺真的不錯。
